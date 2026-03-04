@@ -3,231 +3,181 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Resume - Hari Ari S</title>
+<title>Hari Ari S | IT Infrastructure Director</title>
+
 <style>
-  @page { size: A4; margin: 0; }
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    margin: 0;
-    color: #222;
-    -webkit-print-color-adjust: exact;
-  }
-  .page {
-    display: grid;
-    grid-template-columns: 35% 65%;
-    min-height: 297mm;
-    page-break-after: always;
-  }
-  .left {
-    background: #f3f6fb;
-    padding: 20mm 10mm;
-    box-sizing: border-box;
-  }
-  .right {
-    padding: 20mm;
-    box-sizing: border-box;
-  }
-  h1 {
-    font-size: 22pt;
-    margin: 0;
-    color: #003366;
-    text-align: center;
-  }
-  h2 {
-    font-size: 13pt;
-    color: #003366;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 3px;
-    margin-top: 12px;
-  }
-  h3 {
-    font-size: 11pt;
-    color: #003366;
-    margin: 6px 0 2px;
-  }
-  p, li {
-    font-size: 10.5pt;
-    margin: 2px 0;
-  }
-  ul { margin: 0 0 0 18px; padding: 0; }
-  .contact p, .personal p, .validation-remarks p { margin: 2px 0; font-size: 10pt; }
-  .skills ul { columns: 1; list-style-type: disc; }
-  .section { margin-bottom: 12px; }
-  .validation p { margin: 2px 0; font-size: 10.5pt; }
-  .photo {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  .photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 0.1px solid #003366;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 8px 0;
-  }
-  table, th, td {
-    border: 1px solid #ccc;
-  }
-  th, td {
-    padding: 6px;
-    text-align: left;
-    font-size: 10pt;
-  }
-  th {
-    background-color: #f3f6fb;
-    color: #003366;
-  }
-  .footer {
-    text-align: center;
-    margin-top: 10mm;
-    font-size: 10pt;
-    color: #555;
-  }
-  @media print {
-    body { background: white; }
-    .page { page-break-after: always; }
-  }
+@page { size: A4; margin: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.page {
+  padding: 25mm 22mm;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-text {
+  width: 75%;
+}
+
+.header-text h1 {
+  font-size: 26pt;
+  margin: 0;
+  color: #002b5c;
+}
+
+.header-text p {
+  margin: 4px 0;
+  font-size: 11pt;
+}
+
+.photo img {
+  width:130px;
+  border-radius:50%;
+  border:3px solid #002b5c;
+}
+
+h2 {
+  font-size: 13pt;
+  color: #002b5c;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 4px;
+  margin-top: 22px;
+}
+
+p, li {
+  font-size: 11pt;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #0a7f42;
+  font-weight: bold;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+.section {
+  margin-top: 14px;
+}
+
+.small-role {
+  margin-top: 6px;
+  font-style: italic;
+  color: #333;
+}
 </style>
 </head>
+
 <body>
 <div class="page">
 
-  <!-- LEFT COLUMN -->
-  <div class="left">
-    <div class="photo">
-      <img src="hari.jpg" alt="Hari Ari S">
-    </div>
-
+<!-- HEADER -->
+<div class="header">
+  <div class="header-text">
     <h1>HARI ARI S</h1>
-    <h3 style="text-align:center;">IT Infrastructure & ERP Solutions Manager</h3>
-
-    <div class="contact section">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> hariari07@gmail.com</p>
-      <p><strong>Mobile:</strong> 8122503754 / 8892593190</p>
-      <p><strong>Location:</strong> Hosur / Bengaluru</p>
-    </div>
-
-    <div class="skills section">
-      <h2>Core Expertise</h2>
-      <ul>
-        <li>Enterprise IT Infrastructure Architecture</li>
-        <li>ERP System Design & Development</li>
-        <li>Windows & Linux Server Administration</li>
-        <li>Active Directory & Identity Management</li>
-        <li>Network Security & Firewall Management</li>
-        <li>Backup Strategy & Disaster Recovery</li>
-        <li>Virtualization & Thin Client Architecture</li>
-        <li>IT Operations & Infrastructure Planning</li>
-        <li>Process Automation & Business Workflow Optimization</li>
-        <li>Regulatory Compliance Systems (21 CFR Documentation)</li>
-        <li>Database Management (MySQL)</li>
-        <li>Email Server Implementation & Security</li>
-        <li>Network Architecture & Solution Planning</li>
-        <li>Cost Optimization & Vendor Management</li>
-      </ul>
-    </div>
-
-    <div class="technologies section">
-      <h2>Technology Stack</h2>
-      <p>Windows Server, Linux, Active Directory, MySQL, Virtual Machines, Firewall Security, LAN/WAN Networking, ERP Systems, Backup Solutions</p>
-    </div>
-
-    <div class="languages section">
-      <h2>Languages</h2>
-      <p>Tamil – Native</p>
-      <p>English – Professional</p>
-    </div>
-
-    <div class="validation-remarks section">
-      <h2>Profile Summary</h2>
-      <p>18+ Years Experience</p>
-      <p>Notice Period: 3 Months</p>
-    </div>
+    <p><strong>IT Infrastructure Director | Enterprise Architect | ERP & Digital Transformation Leader</strong></p>
+    <p>Bengaluru / Hosur | 8122503754 | hariari07@gmail.com</p>
+    <p>Portfolio: <strong><a href="https://hariari07.github.io" target="_blank">hariari07.github.io</a></strong></p>
+    <p>18+ Years Experience | Cost Optimization | Cybersecurity | Disaster Recovery</p>
   </div>
 
-  <!-- RIGHT COLUMN -->
-  <div class="right">
-
-    <section class="section">
-      <h2>Professional Summary</h2>
-      <p>
-        IT Infrastructure and ERP Solutions professional with 18+ years of experience designing,
-        implementing and managing enterprise IT environments, business applications and digital
-        transformation initiatives for manufacturing organizations.
-      </p>
-
-      <p>
-        Expert in infrastructure architecture, server administration, network security and in-house ERP
-        system development. Proven ability to deliver vendor-independent technology solutions,
-        automate business processes, implement regulatory compliant systems and reduce operational costs.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Key Achievements</h2>
-      <ul>
-        <li>Designed and developed enterprise ERP system replacing commercial software and reducing annual operational costs by ₹20+ lakhs.</li>
-        <li>Architected and managed complete enterprise IT infrastructure including servers, network security and backup systems.</li>
-        <li>Implemented 21 CFR compliant documentation and workflow automation systems.</li>
-        <li>Eliminated vendor dependency by building in-house infrastructure and business solutions.</li>
-        <li>Improved system uptime, data security and business process efficiency.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Professional Experience</h2>
-
-      <p><strong>Senior IT Executive / IT Infrastructure Lead</strong><br>
-      Lake Chemicals Pvt Ltd, Bengaluru | June 2016 – Present</p>
-
-      <ul>
-        <li>Architect and manage complete enterprise IT infrastructure including Windows/Linux servers, Active Directory, firewall and network security.</li>
-        <li>Designed and developed in-house ERP system covering purchase orders, invoicing, documentation and workflow automation.</li>
-        <li>Implemented regulatory compliant documentation and tracking systems.</li>
-        <li>Managed data security, backup strategy and disaster recovery planning.</li>
-        <li>Automated business processes improving operational efficiency and reducing manual effort.</li>
-        <li>Delivered significant annual cost savings by eliminating external vendor and license dependency.</li>
-      </ul>
-
-      <p><strong>Senior System Engineer</strong> – Sri Tech, Bengaluru (2015 – 2016)</p>
-      <p>Server deployment, infrastructure setup, network configuration and enterprise system support.</p>
-
-      <p><strong>Senior Systems Engineer</strong> – Hi Tech Computers, Bengaluru (2014 – 2015)</p>
-      <p>IT infrastructure installation, server configuration and enterprise technical support.</p>
-
-      <p><strong>Senior Service Engineer</strong> – Hosur IT Support (2011 – 2014)</p>
-      <p>Handled organization-wide infrastructure setup including servers, networks and system administration.</p>
-
-      <p><strong>System Service Engineer</strong> – GKV Computers & Solutions Pvt Ltd (2009 – 2011)</p>
-      <p>Infrastructure deployment, OS configuration and network implementation.</p>
-    </section>
-
-    <section class="section">
-      <h2>Business Impact</h2>
-      <ul>
-        <li>Reduced infrastructure and software costs through in-house solutions.</li>
-        <li>Delivered centralized and secure IT ecosystem.</li>
-        <li>Enabled long-term data protection and operational independence.</li>
-        <li>Improved system availability and performance across organization.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Education</h2>
-      <p>St. Joseph Higher Secondary School, Hosur</p>
-    </section>
-
-    <div class="footer">
-      <p>Date: ____________ &nbsp;&nbsp;&nbsp; Signature: ____________</p>
-    </div>
-
+  <div class="photo">
+    <img src="hari.jpg">
   </div>
 </div>
-</body>
 
+<!-- EXECUTIVE PROFILE -->
+<div class="section">
+<h2>EXECUTIVE PROFILE</h2>
+<p>
+Strategic IT Leader with 18+ years of progressive experience designing, building, and governing enterprise IT ecosystems for manufacturing organizations. Delivered 
+<span class="highlight">₹20+ Lakhs annual IT cost savings</span> through open-source enterprise architecture, in-house ERP development, and elimination of vendor dependency.
+</p>
+
+<p>
+Operate at the intersection of technology strategy, operational efficiency, and business transformation — turning IT into a revenue and growth enabler.
+</p>
+</div>
+
+<!-- STRATEGIC IMPACT -->
+<div class="section">
+<h2>STRATEGIC IMPACT & KEY ACHIEVEMENTS</h2>
+<ul>
+<li class="highlight">Reduced ₹20+ Lakhs Annual IT Operational Cost</li>
+<li class="highlight">Built Fully Company-Owned ERP (Zero License / Zero AMC)</li>
+<li class="highlight">Eliminated Server, Network & Surveillance AMC</li>
+<li class="highlight">Designed Multi-Layer Cybersecurity & Disaster Recovery Architecture</li>
+<li>Established Long-Term IT Sustainability Roadmap</li>
+<li>Improved Infrastructure Stability, Uptime & Data Governance</li>
+<li>Transformed IT into strategic business enabler for manufacturing operations</li>
+</ul>
+</div>
+
+<!-- PROFESSIONAL EXPERIENCE -->
+<div class="section">
+<h2>PROFESSIONAL EXPERIENCE</h2>
+
+<p><strong>IT Infrastructure Lead / Enterprise Architect</strong><br>
+Lake Chemicals Pvt Ltd | 2016 – Present</p>
+<ul>
+<li>Architected and governed enterprise IT infrastructure: Windows/Linux servers, virtualization, firewall security, backup & disaster recovery.</li>
+<li>Designed and deployed fully customized ERP platform covering purchase, finance, HR, compliance & executive dashboards.</li>
+<li>Implemented open-source enterprise stack (Proxmox, Postfix, Dovecot, Duplicati, Nextcloud, OnlyOffice, Superset) eliminating license costs.</li>
+<li>Designed ransomware-resistant network segmentation & version-based backup strategy.</li>
+<li>Managed full IT operations including hardware lifecycle, CCTV, intercom & enterprise connectivity.</li>
+<li>Acted as strategic advisor to management on IT investment planning and cost control strategies.</li>
+</ul>
+
+<p class="small-role"><strong>Senior System Engineer</strong> – Sri Tech, Bengaluru | 2015 – 2016</p>
+<p class="small-role">Server deployment, enterprise infrastructure setup, and technical support leadership.</p>
+
+<p class="small-role"><strong>Senior Systems Engineer</strong> – Hi Tech Computers, Bengaluru | 2014 – 2015</p>
+<p class="small-role">Managed infrastructure installation, OS configuration, and network deployment.</p>
+
+<p class="small-role"><strong>Senior Service Engineer</strong> – Hosur IT Support | 2011 – 2014</p>
+<p class="small-role">Delivered enterprise IT support including servers, networks, and system administration.</p>
+
+<p class="small-role"><strong>System Service Engineer</strong> – GKV Computers & Solutions Pvt Ltd | 2009 – 2011</p>
+<p class="small-role">Infrastructure deployment, OS configuration, and enterprise technical support.</p>
+</div>
+
+<!-- ENTERPRISE TECHNOLOGY -->
+<div class="section">
+<h2>ENTERPRISE TECHNOLOGY EXPERTISE</h2>
+<p><strong>Infrastructure:</strong> Windows Server, Linux, Active Directory, Virtualization Architecture</p>
+<p><strong>Open-Source Stack:</strong> Proxmox, Postfix, Dovecot, Duplicati, Nextcloud, OnlyOffice, Apache Superset</p>
+<p><strong>Cybersecurity:</strong> Firewall Governance, Network Segmentation, Ransomware Protection, Disaster Recovery Planning</p>
+<p><strong>ERP & Automation:</strong> In-House ERP Development, Workflow Automation, Regulatory Systems</p>
+</div>
+
+<!-- BUSINESS TRANSFORMATION -->
+<div class="section">
+<h2>BUSINESS TRANSFORMATION OUTCOMES</h2>
+<ul>
+<li>Converted organization from vendor-dependent IT model to fully owned infrastructure ecosystem.</li>
+<li>Delivered centralized, secure, and scalable IT environment.</li>
+<li>Enabled long-term operational cost reduction and audit readiness.</li>
+<li>Built sustainable IT architecture supporting 10–20 year growth roadmap.</li>
+</ul>
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+<h2>EDUCATION</h2>
+<p>Secondary School Education – St. Joseph Higher Secondary School, Hosur</p>
+</div>
+
+</div>
+</body>
 </html>
