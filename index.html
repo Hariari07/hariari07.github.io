@@ -3,81 +3,76 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hari Ari S | IT Infrastructure & ERP Portfolio</title>
+  <title>Hari Ari S | IT Infrastructure Head | Enterprise Architect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f7fa;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
     }
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 0;
     }
 
     header {
-      background: #003366;
-      color: white;
-      padding: 40px 0;
       text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
     }
 
     header h1 {
-      margin: 0;
+      font-size: 38px;
+      color: #38bdf8;
     }
 
-    header p {
-      opacity: .9;
+    .highlight {
+      color: #22c55e;
+      font-weight: bold;
     }
 
     section {
-      background: white;
-      margin: 20px 0;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, .08);
+      margin: 40px 0;
+      padding: 35px;
+      background: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
     h2 {
-      color: #003366;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
+      color: #38bdf8;
+      margin-bottom: 15px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #eee;
-      padding: 15px;
-      border-radius: 6px;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    button {
-      background: #003366;
-      color: white;
-      padding: 12px 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    .counter {
+      font-size: 42px;
+      font-weight: bold;
+      color: #22c55e;
     }
 
     ul {
-      line-height: 1.7;
+      line-height: 1.8;
+    }
+
+    button {
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0ea5e9;
     }
   </style>
 </head>
@@ -85,102 +80,161 @@
 <body>
 
   <header>
-    <img src="hari.jpg" style="width: 10%; height: 10%; border-radius: 50%;">
+    <img src="hari.jpg" style="width:130px; border-radius:50%; border:3px solid #38bdf8;">
     <h1>Hari Ari S</h1>
-    <p>IT Infrastructure & ERP Solutions Manager</p>
-    <p>18+ Years Experience | Enterprise IT | ERP Development | Digital Transformation</p>
+    <p class="highlight">
+      IT Infrastructure Head | ERP Architect | Enterprise Cost Optimization Leader
+    </p>
+    <p>18+ Years Experience | Cybersecurity | Open-Source Enterprise | Disaster Recovery</p>
   </header>
 
   <div class="container">
 
     <section>
-      <h2>Professional Summary</h2>
+      <h2>Executive Business Impact</h2>
+
+      <div class="counter" id="savings">0</div>
+      <p>Verified Annual IT Cost Reduction</p>
+
+      <script>
+        let count = 0;
+        let target = 2000000;
+        let counter = document.getElementById("savings");
+
+        let interval = setInterval(() => {
+          count += 50000;
+          counter.innerText = "₹" + count.toLocaleString();
+          if (count >= target) {
+            clearInterval(interval);
+            counter.innerText = "₹20,00,000+";
+          }
+        }, 40);
+      </script>
+
+      <ul>
+        <li class="highlight">✔ Reduced ₹20+ Lakhs Annual IT Operational Cost</li>
+        <li class="highlight">✔ Eliminated Software Licensing & ERP AMC</li>
+        <li class="highlight">✔ Removed Server, Network, CCTV & Intercom AMC</li>
+        <li class="highlight">✔ Built Vendor-Independent IT Ecosystem</li>
+        <li class="highlight">✔ Designed Long-Term Sustainable Infrastructure</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Company-Owned ERP Platform</h2>
+
       <p>
-        IT Infrastructure and ERP Solutions professional with 18+ years of experience
-        designing enterprise IT environments, infrastructure architecture and business
-        automation systems for manufacturing organizations.
+        Designed and developed a fully customized ERP system replacing commercial licensed software.
       </p>
 
       <ul>
-        <li>Enterprise IT Infrastructure Architecture</li>
-        <li>ERP System Development & Implementation</li>
-        <li>Windows & Linux Server Administration</li>
-        <li>Network Security & Firewall Management</li>
-        <li>Backup Strategy & Disaster Recovery</li>
-        <li>Cost Optimization & Vendor-Free Architecture</li>
-        <li>No AMC related to Server, Hardware, Intercom, Camera, Networking and Website.</li>
+        <li class="highlight">No License Fees</li>
+        <li class="highlight">No AMC</li>
+        <li class="highlight">Unlimited Users</li>
+        <li class="highlight">Complete Source Code Ownership</li>
+        <li class="highlight">VM-Based Deployment (Hardware Independent)</li>
+        <li>Modules: Purchase, Inventory, HR, Finance, Workflow Automation, Dashboard</li>
       </ul>
+
+      <p>
+        Ensures long-term independence, scalability, and total operational control.
+      </p>
     </section>
 
     <section>
-      <h2>ERP System Development</h2>
+      <h2>Open-Source Enterprise Stack</h2>
 
-      <div class="grid">
-
-        <div class="card">
-          <h3>Purchase Order Module</h3>
-          <img src="erp-po.png">
-          <p>Automated purchase workflow, approval tracking and documentation.</p>
-        </div>
-
-        <div class="card">
-          <h3>Invoice Management</h3>
-          <img src="erp-invoice.png">
-          <p>Invoice generation system.</p>
-        </div>
-
-        <div class="card">
-          <h3>Employee Module</h3>
-          <img src="erp-emp.png">
-          <p>HR Module system.</p>
-        </div>
-
-        <div class="card">
-          <h3>Dashbord</h3>
-          <img src="erp-dash.png">
-          <p>Employee Status.</p>
-        </div>
-
-      </div>
-      <h5>*Note: Screenshots visible data is dummy details</h5>
-    </section>
-
-    <section>
-      <h2>IT Infrastructure Architecture</h2>
-
-      <div class="grid">
-        <img src="info.png">
-      </div>
-    </section>
-
-    <section>
-      <h2>Business Impact & Achievements</h2>
       <ul>
-        <li>Built enterprise ERP system replacing commercial software.</li>
-        <li>Reduced annual operational cost by ₹20+ lakhs.</li>
-        <li>Implemented regulatory compliant workflow systems.</li>
-        <li>Eliminated vendor dependency and AMC cost.</li>
-        <li>Improved system uptime and data security.</li>
-        <li>Delivered centralized IT infrastructure for manufacturing environment.</li>
+        <li>Proxmox Virtualization Environment</li>
+        <li>Postfix & Dovecot Mail Server</li>
+        <li>Duplicati Version-Controlled Backup</li>
+        <li>Nextcloud Private Cloud</li>
+        <li>OnlyOffice Collaboration Suite</li>
+        <li>Apache Superset Business Intelligence</li>
+        <li>Linux Server Infrastructure</li>
+        <li>MySQL Database Systems</li>
+      </ul>
+
+      <p class="highlight">
+        Enterprise-grade open-source architecture eliminating recurring licensing expenses.
+      </p>
+    </section>
+
+    <section>
+      <h2>Cybersecurity & Data Protection Strategy</h2>
+
+      <ul>
+        <li class="highlight">Network Segmentation & Isolation Zones</li>
+        <li>Ransomware Protection Strategy</li>
+        <li>Version-Based Automated Backup</li>
+        <li>Multi-Location Offsite Backup</li>
+        <li>Disaster Recovery Planning & Testing</li>
+        <li>Firewall & Secure Remote Access Configuration</li>
+      </ul>
+
+      <p>
+        Layered security design protecting infrastructure from internal and external threats.
+      </p>
+    </section>
+
+    <section>
+      <h2>Complete IT Operations & Support Leadership</h2>
+
+      <ul>
+        <li>Server Deployment & Administration</li>
+        <li>Desktop & Laptop Hardware Support</li>
+        <li>Spare Parts Sourcing & Replacement</li>
+        <li>Network Design & Troubleshooting</li>
+        <li>Switch, Router & Firewall Management</li>
+        <li>CCTV Surveillance Systems</li>
+        <li>Intercom Systems</li>
+        <li>Website Hosting & Maintenance</li>
+        <li>Thin Client Architecture</li>
+        <li>User IT Helpdesk Support</li>
+        <li>IT Asset Lifecycle Management</li>
+        <li>Vendor Negotiation & Cost Optimization</li>
+      </ul>
+
+      <p class="highlight">
+        Operating as Full IT Department – Strategy + Architecture + Security + Support.
+      </p>
+    </section>
+
+    <section>
+      <h2>Business Transformation Achieved</h2>
+
+      <ul>
+        <li class="highlight">₹20+ Lakhs Annual Savings</li>
+        <li>Improved Infrastructure Stability & Uptime</li>
+        <li>Eliminated Vendor Lock-In</li>
+        <li>Enhanced Data Security</li>
+        <li>ERP-Based Process Automation</li>
+        <li>Scalable IT Foundation for Future Growth</li>
       </ul>
     </section>
 
     <section>
-      <h2>Technology Stack</h2>
+      <h2>Why Hire Me as IT Head / Infrastructure Director?</h2>
+
       <ul>
-        <li>Windows Server, Linux Server</li>
-        <li>Active Directory</li>
-        <li>MySQL Database</li>
-        <li>Firewall & Network Security</li>
-        <li>Virtual Machines</li>
-        <li>ERP System Development</li>
-        <li>Backup & Disaster Recovery</li>
-        <li>Thinclient computers</li>
+        <li class="highlight">✔ Proven Cost Reduction Leader</li>
+        <li class="highlight">✔ Strategic Thinker with Hands-On Execution</li>
+        <li class="highlight">✔ Built Enterprise Systems from Scratch</li>
+        <li class="highlight">✔ Eliminates Vendor Dependency</li>
+        <li class="highlight">✔ Strong Cybersecurity & DR Expertise</li>
+        <li class="highlight">✔ Long-Term Infrastructure Vision (10–20 Year Planning)</li>
+        <li class="highlight">✔ Business-Focused Technology Decision Maker</li>
       </ul>
+
+      <p>
+        I do not just maintain IT systems.
+        I design cost-efficient, secure, scalable enterprise environments that directly support business growth and
+        profitability.
+      </p>
     </section>
 
     <section style="text-align:center;">
-      <h2>Resume</h2>
+      <h2>Executive Resume</h2>
       <a href="resume.pdf" target="_blank">
         <button>Download Resume</button>
       </a>
