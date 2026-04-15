@@ -1,206 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="UTF-8">
     <title>Hari Ari S | IT Infrastructure Director</title>
 
     <style>
-        @page { size: A4; margin: 0; }
+        @page {
+            size: A4;
+            margin: 0;
+        }
 
         body {
-          font-family: "Segoe UI", Arial, sans-serif;
-          margin: 0;
-          color: #1a1a1a;
+            margin: 0;
+            background: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         .page {
-          padding: 25mm 22mm;
+            width: 210mm;
+            min-height: 297mm;
+            margin: auto;
+            background: #ffffff;
         }
 
+        /* HEADER */
         .header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        .header-text {
-          width: 75%;
-        }
-
-        .header-text h1 {
-          font-size: 26pt;
-          margin: 0;
-          color: #002b5c;
-        }
-
-        .header-text p {
-          margin: 4px 0;
-          font-size: 11pt;
+            background: linear-gradient(135deg, #0b2e59, #1e40af);
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .photo img {
-          width:130px;
-          border-radius:50%;
-          border:3px solid #002b5c;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 50% 20%;
+            border: 4px solid #22c55e;
         }
 
-        h2 {
-          font-size: 13pt;
-          color: #002b5c;
-          border-bottom: 2px solid #ddd;
-          padding-bottom: 4px;
-          margin-top: 22px;
+        .name-block h1 {
+            margin: 0;
+            font-size: 30px;
+            color: #fff;
         }
 
-        p, li {
-          font-size: 11pt;
-          line-height: 1.6;
+        .name-block p {
+            margin: 4px 0;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        .highlight {
-          color: #0a7f42;
-          font-weight: bold;
+        /* KPI */
+        .kpi-row {
+            display: flex;
+            gap: 15px;
+            padding: 20px 25px;
+            background: #f1f5f9;
         }
 
-        ul {
-          margin-left: 20px;
+        .kpi {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .kpi strong {
+            font-size: 20px;
+            color: #16a34a;
+        }
+
+        /* CONTENT */
+        .container {
+            padding: 20px 25px;
         }
 
         .section {
-          margin-top: 14px;
+            margin-bottom: 16px;
+            background: #f8fafc;
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 4px solid #0b2e59;
         }
 
-        .small-role {
-          margin-top: 6px;
-          font-style: italic;
-          color: #333;
+        .section h2 {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #0b2e59;
+        }
+
+        p,
+        li {
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #1e293b;
+        }
+
+        ul {
+            margin-left: 18px;
+        }
+
+        .highlight {
+            color: #16a34a;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .company {
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        /* ===== PRINT FIX ===== */
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .page {
+                box-shadow: none;
+                width: 210mm;
+            }
+
+            /* Prevent section breaking */
+            .section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .kpi-row {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .header {
+                page-break-after: avoid;
+            }
+
+            /* Avoid breaking lists */
+            ul,
+            li {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Ensure proper spacing */
+            .section {
+                margin-bottom: 12px;
+            }
         }
     </style>
 </head>
 
 <body>
-<div class="page">
 
-    <!-- HEADER -->
-    <div class="header">
-        <div class="header-text">
-            <h1>HARI ARI S</h1>
-            <p><strong>IT Infrastructure Director | Enterprise Architect | ERP & Digital Transformation Leader</strong>
-            </p>
-            <p>Bengaluru / Hosur | 8122503754 | hariari07@gmail.com</p>
-            <p>Portfolio: <strong><a href="https://hariari07.github.io" target="_blank">hariari07.github.io</a></strong>
-            </p>
-            <p>18+ Years Experience -- IT | Cost Optimization | Cybersecurity | Disaster Recovery</p>
+    <div class="page">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="photo">
+                <img src="hari.jpg">
+            </div>
+
+            <div class="name-block">
+                <h1>HARI ARI S</h1>
+                <p><strong>IT Infrastructure Director | Enterprise Architect | ERP Transformation Leader</strong></p>
+                <p>Bengaluru / Hosur | 8122503754 | hariari07@gmail.com</p>
+                <p>18+ Years Experience IT | Cybersecurity | Open-Source Enterprise | Disaster Recovery</p>
+            </div>
         </div>
 
-        <div class="photo">
-            <img src="hari.jpg" width="160" height="160">
+        <!-- KPI -->
+        <div class="kpi-row">
+            <div class="kpi">
+                <strong>₹20+ Lakhs</strong>
+                <div>Annual Savings (Management)</div>
+            </div>
+
+            <div class="kpi">
+                <strong>No License | No Amc</strong>
+                <div>ERP & Software (Management)</div>
+            </div>
+
+            <div class="kpi">
+                <strong>100%</strong>
+                <div>Vendor Independence (Management)</div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- SUMMARY -->
+            <div class="section">
+                <h2>EXECUTIVE SUMMARY</h2>
+                <p>
+                    Enterprise IT leader with 18+ years delivering cost-efficient, scalable infrastructure.
+                    Specialized in <span class="highlight">open-source enterprise architecture and ERP ownership
+                        models</span>,
+                    transforming IT into a strategic business enabler.
+                </p>
+            </div>
+
+            <!-- INFRA SCALE -->
+            <div class="section">
+                <h2>INFRASTRUCTURE SCALE & ENVIRONMENT</h2>
+                <ul>
+                    <li><strong>Servers:</strong> Virtualized enterprise infrastructure (Proxmox-based)</li>
+                    <li><strong>Users:</strong> Organization-wide IT support & ERP users</li>
+                    <li><strong>Data:</strong> Managed structured & backup environments</li>
+                    <li><strong>Deployment:</strong> VM-based, hardware-independent architecture</li>
+                </ul>
+            </div>
+
+            <!-- IMPACT -->
+            <div class="section">
+                <h2>EXECUTIVE BUSINESS IMPACT</h2>
+                <ul>
+                    <li class="highlight">Reduced ₹20+ Lakhs Annual IT Cost</li>
+                    <li class="highlight">Eliminated Licensing, ERP AMC & Infrastructure AMC</li>
+                    <li class="highlight">Built Vendor-Independent IT Ecosystem</li>
+                    <li class="highlight">Designed Long-Term Sustainable Infrastructure</li>
+                </ul>
+            </div>
+
+            <!-- ERP -->
+            <div class="section">
+                <h2>COMPANY-OWNED ERP PLATFORM</h2>
+                <ul>
+                    <li>Full ERP: Purchase, Inventory, HR, Finance, Workflow Automation</li>
+                    <li class="highlight">Zero License | Zero AMC | Unlimited Users</li>
+                    <li>VM-based deployment</li>
+                    <li>Complete source code ownership</li>
+                </ul>
+            </div>
+
+            <!-- STACK -->
+            <div class="section">
+                <h2>OPEN-SOURCE ENTERPRISE STACK</h2>
+                <div class="grid">
+                    <ul>
+                        <li>Proxmox</li>
+                        <li>Postfix & Dovecot</li>
+                        <li>Duplicati</li>
+                        <li>Nextcloud</li>
+                    </ul>
+
+                    <ul>
+                        <li>OnlyOffice</li>
+                        <li>Apache Superset</li>
+                        <li>Linux Infrastructure</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECURITY -->
+            <div class="section">
+                <h2>CYBERSECURITY & DATA PROTECTION</h2>
+                <ul>
+                    <li class="highlight">Network Segmentation & Isolation</li>
+                    <li>Ransomware Protection Strategy</li>
+                    <li>Multi-location backup</li>
+                    <li>Disaster Recovery Planning</li>
+                </ul>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="section">
+                <h2>KEY PROJECTS & INITIATIVES</h2>
+                <ul>
+                    <li><strong>In-House ERP:</strong> Built full ERP replacing licensed systems</li>
+                    <li><strong>Open-Source Migration:</strong> Eliminated recurring costs</li>
+                    <li><strong>Disaster Recovery:</strong> Multi-location backup strategy</li>
+                    <li><strong>Security Architecture:</strong> Ransomware-resistant design</li>
+                </ul>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="section">
+                <h2>PROFESSIONAL EXPERIENCE</h2>
+
+                <div class="job-title">IT Infrastructure Lead / Enterprise Architect</div>
+                <div class="company">Lake Chemicals Pvt Ltd | 2016 – Present</div>
+                <ul>
+                    <li class="highlight">Achieved ₹20+ Lakhs annual cost reduction</li>
+                    <li>Designed enterprise IT architecture (servers, network, firewall)</li>
+                    <li>Developed company-owned ERP platform</li>
+                    <li>Eliminated vendor dependency across systems</li>
+                    <li>Implemented secure backup & DR architecture</li>
+                </ul>
+
+                <div class="job-title">Senior System Engineer</div>
+                <div class="company">Sri Tech | 2015 – 2016</div>
+
+                <div class="job-title">Senior Systems Engineer</div>
+                <div class="company">Hi Tech Computers | 2014 – 2015</div>
+
+                <div class="job-title">Senior Service Engineer</div>
+                <div class="company">Hosur IT Support | 2011 – 2014</div>
+
+                <div class="job-title">System Engineer</div>
+                <div class="company">GKV Computers | 2009 – 2011</div>
+
+                <div class="job-title">Junior Engineer</div>
+                <div class="company">Acer Service | 2008 – 2009</div>
+
+                <div class="job-title">Junior Engineer</div>
+                <div class="company">Tech Service | 2007</div>
+
+            </div>
+
+            <!-- LEADERSHIP -->
+            <div class="section">
+                <h2>LEADERSHIP & RESPONSIBILITIES</h2>
+                <ul>
+                    <li>Primary IT decision-maker for infrastructure & security</li>
+                    <li>Drive cost optimization aligned with business goals</li>
+                    <li>Manage complete IT operations lifecycle</li>
+                    <li>Define long-term IT roadmap (10–20 years)</li>
+                </ul>
+            </div>
+
+            <!-- TOOLS -->
+            <div class="section">
+                <h2>TOOLS & TECHNOLOGIES</h2>
+                <p>
+                    <strong>Infrastructure:</strong> Windows Server, Linux, Virtualization<br>
+                    <strong>Networking:</strong> Firewall, Routing, Switching<br>
+                    <strong>Platforms:</strong> Proxmox, Nextcloud, Superset, MySQL<br>
+                    <strong>Security:</strong> Backup, Disaster Recovery, Ransomware Protection
+                </p>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="section">
+                <h2>EDUCATION</h2>
+                <p>Secondary School Education – St. Joseph Higher Secondary School, Hosur</p>
+            </div>
+
         </div>
     </div>
 
-    <!-- EXECUTIVE PROFILE -->
-    <div class="section">
-        <h2>EXECUTIVE PROFILE</h2>
-        <p>
-            Strategic IT Leader with 18+ years of progressive experience designing, building, and governing enterprise
-            IT ecosystems for manufacturing organizations. Delivered
-            <span class="highlight">₹20+ Lakhs annual IT cost savings</span> through open-source enterprise
-            architecture, in-house ERP development, and elimination of vendor dependency.
-        </p>
-
-        <p>
-            Operate at the intersection of technology strategy, operational efficiency, and business transformation —
-            turning IT into a revenue and growth enabler.
-        </p>
-    </div>
-
-    <!-- STRATEGIC IMPACT -->
-    <div class="section">
-        <h2>STRATEGIC IMPACT & KEY ACHIEVEMENTS</h2>
-        <ul>
-            <li class="highlight">Reduced ₹20+ Lakhs Annual IT Operational Cost</li>
-            <li class="highlight">Built Fully Company-Owned ERP (Zero License / Zero AMC)</li>
-            <li class="highlight">Eliminated Server, Network & Surveillance AMC</li>
-            <li class="highlight">Designed Multi-Layer Cybersecurity & Disaster Recovery Architecture</li>
-            <li>Established Long-Term IT Sustainability Roadmap</li>
-            <li>Improved Infrastructure Stability, Uptime & Data Governance</li>
-            <li>Transformed IT into strategic business enabler for manufacturing operations</li>
-        </ul>
-    </div>
-
-    <!-- PROFESSIONAL EXPERIENCE -->
-    <div class="section">
-        <h2>PROFESSIONAL EXPERIENCE</h2>
-
-        <p><strong>IT Infrastructure Lead / Enterprise Architect</strong><br>
-            Lake Chemicals Pvt Ltd | June 2016 – Present</p>
-        <ul>
-            <li>Architected and governed enterprise IT infrastructure: Windows/Linux servers, virtualization, firewall
-                security, backup & disaster recovery.
-            </li>
-            <li>Designed and deployed fully customized ERP platform covering purchase, finance, HR, compliance &
-                executive dashboards.
-            </li>
-            <li>Implemented open-source enterprise stack (Proxmox, Postfix, Dovecot, Duplicati, Nextcloud, OnlyOffice,
-                Superset) eliminating license costs.
-            </li>
-            <li>Designed ransomware-resistant network segmentation & version-based backup strategy.</li>
-            <li>Managed full IT operations including hardware lifecycle, CCTV, intercom & enterprise connectivity.</li>
-            <li>Acted as strategic advisor to management on IT investment planning and cost control strategies.</li>
-        </ul>
-
-        <p class="small-role"><strong>Senior System Engineer</strong> – Sri Tech, Bengaluru | Apr 2015 – May 2016</p>
-        <p class="small-role">Server deployment, enterprise infrastructure setup, and technical support leadership.</p>
-
-        <p class="small-role"><strong>Senior Systems Engineer</strong> – Hi Tech Computers, Bengaluru | Aug 2014 – Apr 2015</p>
-        <p class="small-role">Managed infrastructure installation, OS configuration, and network deployment.</p>
-
-        <p class="small-role"><strong>Senior Service Engineer</strong> – Hosur IT Support | Oct 2011 – Aug 2014</p>
-        <p class="small-role">Delivered enterprise IT support including servers, networks, and system
-            administration.</p>
-
-        <p class="small-role"><strong>System Service Engineer</strong> – GKV Computers & Solutions Pvt Ltd | Oct 2009 – Sep 2011
-        </p>
-        <p class="small-role">Infrastructure deployment, OS configuration, and enterprise technical support.</p>
-
-        <p class="small-role"><strong>Junior System Service Engineer</strong> – Acer Service Support | JAN 2008 - Sep 2009
-        </p>
-        <p class="small-role">Computer Hardware Assemble, OS configuration, and enterprise technical support.</p>
-
-        <p class="small-role"><strong>Junior System Service Engineer</strong> – Tech Service | Jul 2007 - Sep 2007
-        </p>
-        <p class="small-role">OS configuration and basic software installation.</p>
-    </div>
-
-    <!-- ENTERPRISE TECHNOLOGY -->
-    <div class="section">
-        <h2>ENTERPRISE TECHNOLOGY EXPERTISE</h2>
-        <p><strong>Infrastructure:</strong> Windows Server, Linux, Active Directory, Virtualization Architecture</p>
-        <p><strong>Open-Source Stack:</strong> Proxmox, Postfix, Dovecot, Duplicati, Nextcloud, OnlyOffice, Apache
-            Superset</p>
-        <p><strong>Cybersecurity:</strong> Firewall Governance, Network Segmentation, Ransomware Protection, Disaster
-            Recovery Planning</p>
-        <p><strong>ERP & Automation:</strong> In-House ERP Development, Workflow Automation, Regulatory Systems</p>
-    </div>
-
-    <!-- BUSINESS TRANSFORMATION -->
-    <div class="section">
-        <h2>BUSINESS TRANSFORMATION OUTCOMES</h2>
-        <ul>
-            <li>Converted organization from vendor-dependent IT model to fully owned infrastructure ecosystem.</li>
-            <li>Delivered centralized, secure, and scalable IT environment.</li>
-            <li>Enabled long-term operational cost reduction and audit readiness.</li>
-            <li>Built sustainable IT architecture supporting 10–20 year growth roadmap.</li>
-        </ul>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="section">
-        <h2>EDUCATION</h2>
-        <p>Secondary School Education – St. Joseph Higher Secondary School, Hosur</p>
-    </div>
-
-</div>
 </body>
+
 </html>
