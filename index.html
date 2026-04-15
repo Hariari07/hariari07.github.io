@@ -2,248 +2,414 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Hari Ari S | IT Infrastructure Head | Enterprise Architect</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>Hari Ari S | IT Infrastructure Head | Enterprise Architect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+    <style>
+        :root {
+            --bg: #030712;
+            --card: #0b1220;
+            --card-2: #0f172a;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --brand: #38bdf8;
+            --accent: #22c55e;
+            --glow: rgba(56, 189, 248, 0.35);
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 0;
-    }
+        .photo img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 50% 20%;
+            border: 4px solid #22c55e;
+        }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
 
-    header h1 {
-      font-size: 38px;
-      color: #38bdf8;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(1200px 600px at 50% -10%, #0f172a 0%, #020617 60%, #020617 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-    .highlight {
-      color: #22c55e;
-      font-weight: bold;
-    }
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 0 60px;
+        }
 
-    section {
-      margin: 40px 0;
-      padding: 35px;
-      background: #1e293b;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    }
+        /* Header */
+        header {
+            position: relative;
+            text-align: center;
+            padding: 90px 20px 70px;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 1));
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 15px;
-    }
+        header::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent 60%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(20px);
+        }
 
-    .counter {
-      font-size: 42px;
-      font-weight: bold;
-      color: #22c55e;
-    }
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid rgba(56, 189, 248, 0.6);
+            box-shadow: 0 0 30px var(--glow);
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
 
-    ul {
-      line-height: 1.8;
-    }
+        header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #38bdf8, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
 
-    button {
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        .highlight {
+            color: var(--accent);
+            font-weight: 700
+        }
 
-    button:hover {
-      background: #0ea5e9;
-    }
-  </style>
+        header p {
+            color: var(--muted);
+            margin-top: 8px;
+            position: relative;
+            z-index: 1
+        }
+
+        /* Sections */
+        section {
+            margin: 28px 0;
+            padding: 32px;
+            background: linear-gradient(160deg, rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            transition: all .35s ease;
+            position: relative;
+        }
+
+        section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: linear-gradient(120deg, transparent, rgba(56, 189, 248, 0.08), transparent);
+            opacity: 0;
+            transition: .35s;
+        }
+
+        section:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9)
+        }
+
+        section:hover::after {
+            opacity: 1
+        }
+
+        h2 {
+            color: var(--brand);
+            margin-bottom: 14px;
+            font-size: 22px;
+            letter-spacing: .5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--brand);
+            box-shadow: 0 0 12px var(--glow);
+        }
+
+        p {
+            color: var(--muted);
+            margin-bottom: 12px
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 8px
+        }
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+        }
+
+        li:last-child {
+            border-bottom: none
+        }
+
+        /* KPI Counter */
+        .counter {
+            font-size: 54px;
+            font-weight: 800;
+            margin: 10px 0;
+            background: linear-gradient(90deg, #22c55e, #4ade80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 10px
+        }
+
+        .card {
+            padding: 22px;
+            border-radius: 14px;
+            background: linear-gradient(160deg, #0b1220, #020617);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.25), transparent 60%);
+            top: -80px;
+            right: -80px;
+            filter: blur(20px)
+        }
+
+        .card:hover {
+            transform: scale(1.04);
+            border: 1px solid rgba(34, 197, 94, 0.35)
+        }
+
+        /* Button */
+        button {
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+            color: #020617;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(14, 165, 233, 0.45)
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #6b7280;
+            font-size: 13px
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-  <img src="hari.jpg" style="width:130px; height:130px; border-radius:50% / 50%; border:3px solid #38bdf8;">
-    <h1>Hari Ari S</h1>
-    <p class="highlight">
-      IT Infrastructure Head | ERP Architect | Enterprise Cost Optimization Leader
-    </p>
-    <p>18+ Years Experience | Cybersecurity | Open-Source Enterprise | Disaster Recovery</p>
-  </header>
+    <header>
+        <img src="hari.jpg">
+        <h1>Hari Ari S</h1>
+        <p class="highlight">IT Infrastructure Head | ERP Architect | Enterprise Cost Optimization Leader</p>
+        <p>18+ Years Experience | Cybersecurity | Open-Source Enterprise | Disaster Recovery</p>
+    </header>
 
-  <div class="container">
+    <div class="container">
 
-    <section>
-      <h2>Executive Business Impact</h2>
+        <section>
+            <h2>Executive Business Impact</h2>
 
-      <div class="counter" id="savings">0</div>
-      <p>Verified Annual IT Cost Reduction</p>
+            <div class="counter" id="savings">0</div>
+            <p>Verified Annual IT Cost Reduction</p>
 
-      <script>
+            <ul>
+                <li class="highlight">✔ Reduced ₹20+ Lakhs Annual IT Operational Cost</li>
+                <li class="highlight">✔ Eliminated Software Licensing & ERP AMC</li>
+                <li class="highlight">✔ Removed Server, Network, CCTV & Intercom AMC</li>
+                <li class="highlight">✔ Built Vendor-Independent IT Ecosystem</li>
+                <li class="highlight">✔ Designed Long-Term Sustainable Infrastructure</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Company-Owned ERP Platform</h2>
+
+            <p>Designed and developed a fully customized ERP system replacing commercial licensed software.</p>
+
+            <ul>
+                <li class="highlight">No License Fees</li>
+                <li class="highlight">No AMC</li>
+                <li class="highlight">Unlimited Users</li>
+                <li class="highlight">Complete Source Code Ownership</li>
+                <li class="highlight">VM-Based Deployment (Hardware Independent)</li>
+                <li>Modules: Purchase, Inventory, HR, Finance, Workflow Automation, Dashboard</li>
+            </ul>
+
+            <p>Ensures long-term independence, scalability, and total operational control.</p>
+        </section>
+
+        <section>
+            <h2>Open-Source Enterprise Stack</h2>
+
+            <ul>
+                <li>Proxmox Virtualization Environment</li>
+                <li>Postfix & Dovecot Mail Server</li>
+                <li>Duplicati Version-Controlled Backup</li>
+                <li>Nextcloud Private Cloud</li>
+                <li>OnlyOffice Collaboration Suite</li>
+                <li>Apache Superset Business Intelligence</li>
+                <li>Linux Server Infrastructure</li>
+                <li>MySQL Database Systems</li>
+            </ul>
+
+            <p class="highlight">Enterprise-grade open-source architecture eliminating recurring licensing expenses.</p>
+        </section>
+
+        <section>
+            <h2>Cybersecurity & Data Protection Strategy</h2>
+
+            <ul>
+                <li class="highlight">Network Segmentation & Isolation Zones</li>
+                <li>Ransomware Protection Strategy</li>
+                <li>Version-Based Automated Backup</li>
+                <li>Multi-Location Offsite Backup</li>
+                <li>Disaster Recovery Planning & Testing</li>
+                <li>Firewall & Secure Remote Access Configuration</li>
+            </ul>
+
+            <p>Layered security design protecting infrastructure from internal and external threats.</p>
+        </section>
+
+        <section>
+            <h2>Complete IT Operations & Support Leadership</h2>
+
+            <ul>
+                <li>Server Deployment & Administration</li>
+                <li>Desktop & Laptop Hardware Support</li>
+                <li>Spare Parts Sourcing & Replacement</li>
+                <li>Network Design & Troubleshooting</li>
+                <li>Switch, Router & Firewall Management</li>
+                <li>CCTV Surveillance Systems</li>
+                <li>Intercom Systems</li>
+                <li>Website Hosting & Maintenance</li>
+                <li>Thin Client Architecture</li>
+                <li>User IT Helpdesk Support</li>
+                <li>IT Asset Lifecycle Management</li>
+                <li>Vendor Negotiation & Cost Optimization</li>
+            </ul>
+
+            <p class="highlight">Operating as Full IT Department – Strategy + Architecture + Security + Support.</p>
+        </section>
+
+        <section>
+            <h2>Business Transformation Achieved</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="highlight">₹20+ Lakhs</div>
+                    <p>Annual Savings</p>
+                </div>
+                <div class="card">
+                    <p>Improved Infrastructure Stability & Uptime</p>
+                </div>
+                <div class="card">
+                    <p>Eliminated Vendor Lock-In</p>
+                </div>
+                <div class="card">
+                    <p>Enhanced Data Security</p>
+                </div>
+                <div class="card">
+                    <p>ERP-Based Process Automation</p>
+                </div>
+                <div class="card">
+                    <p>Scalable IT Foundation for Future Growth</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Why Hire Me as IT Head / Infrastructure Director?</h2>
+
+            <ul>
+                <li class="highlight">✔ Proven Cost Reduction Leader</li>
+                <li class="highlight">✔ Strategic Thinker with Hands-On Execution</li>
+                <li class="highlight">✔ Built Enterprise Systems from Scratch</li>
+                <li class="highlight">✔ Eliminates Vendor Dependency</li>
+                <li class="highlight">✔ Strong Cybersecurity & DR Expertise</li>
+                <li class="highlight">✔ Long-Term Infrastructure Vision (10–20 Year Planning)</li>
+                <li class="highlight">✔ Business-Focused Technology Decision Maker</li>
+            </ul>
+
+            <p>I do not just maintain IT systems. I design cost-efficient, secure, scalable enterprise environments that
+                directly support business growth and profitability.</p>
+        </section>
+
+        <section style="text-align:center;">
+            <h2>Executive Resume</h2>
+            <a href="resume.pdf" target="_blank">
+                <button>Download Resume</button>
+            </a>
+        </section>
+
+    </div>
+
+    <div class="footer">© 2026 Hari Ari S | Enterprise IT Leadership Portfolio</div>
+
+    <script>
         let count = 0;
         let target = 2000000;
         let counter = document.getElementById("savings");
 
         let interval = setInterval(() => {
-          count += 50000;
-          counter.innerText = "₹" + count.toLocaleString();
-          if (count >= target) {
-            clearInterval(interval);
-            counter.innerText = "₹20,00,000+";
-          }
+            count += 50000;
+            counter.innerText = "₹" + count.toLocaleString();
+            if (count >= target) {
+                clearInterval(interval);
+                counter.innerText = "₹20,00,000+";
+            }
         }, 40);
-      </script>
-
-      <ul>
-        <li class="highlight">✔ Reduced ₹20+ Lakhs Annual IT Operational Cost</li>
-        <li class="highlight">✔ Eliminated Software Licensing & ERP AMC</li>
-        <li class="highlight">✔ Removed Server, Network, CCTV & Intercom AMC</li>
-        <li class="highlight">✔ Built Vendor-Independent IT Ecosystem</li>
-        <li class="highlight">✔ Designed Long-Term Sustainable Infrastructure</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Company-Owned ERP Platform</h2>
-
-      <p>
-        Designed and developed a fully customized ERP system replacing commercial licensed software.
-      </p>
-
-      <ul>
-        <li class="highlight">No License Fees</li>
-        <li class="highlight">No AMC</li>
-        <li class="highlight">Unlimited Users</li>
-        <li class="highlight">Complete Source Code Ownership</li>
-        <li class="highlight">VM-Based Deployment (Hardware Independent)</li>
-        <li>Modules: Purchase, Inventory, HR, Finance, Workflow Automation, Dashboard</li>
-      </ul>
-
-      <p>
-        Ensures long-term independence, scalability, and total operational control.
-      </p>
-    </section>
-
-    <section>
-      <h2>Open-Source Enterprise Stack</h2>
-
-      <ul>
-        <li>Proxmox Virtualization Environment</li>
-        <li>Postfix & Dovecot Mail Server</li>
-        <li>Duplicati Version-Controlled Backup</li>
-        <li>Nextcloud Private Cloud</li>
-        <li>OnlyOffice Collaboration Suite</li>
-        <li>Apache Superset Business Intelligence</li>
-        <li>Linux Server Infrastructure</li>
-        <li>MySQL Database Systems</li>
-      </ul>
-
-      <p class="highlight">
-        Enterprise-grade open-source architecture eliminating recurring licensing expenses.
-      </p>
-    </section>
-
-    <section>
-      <h2>Cybersecurity & Data Protection Strategy</h2>
-
-      <ul>
-        <li class="highlight">Network Segmentation & Isolation Zones</li>
-        <li>Ransomware Protection Strategy</li>
-        <li>Version-Based Automated Backup</li>
-        <li>Multi-Location Offsite Backup</li>
-        <li>Disaster Recovery Planning & Testing</li>
-        <li>Firewall & Secure Remote Access Configuration</li>
-      </ul>
-
-      <p>
-        Layered security design protecting infrastructure from internal and external threats.
-      </p>
-    </section>
-
-    <section>
-      <h2>Complete IT Operations & Support Leadership</h2>
-
-      <ul>
-        <li>Server Deployment & Administration</li>
-        <li>Desktop & Laptop Hardware Support</li>
-        <li>Spare Parts Sourcing & Replacement</li>
-        <li>Network Design & Troubleshooting</li>
-        <li>Switch, Router & Firewall Management</li>
-        <li>CCTV Surveillance Systems</li>
-        <li>Intercom Systems</li>
-        <li>Website Hosting & Maintenance</li>
-        <li>Thin Client Architecture</li>
-        <li>User IT Helpdesk Support</li>
-        <li>IT Asset Lifecycle Management</li>
-        <li>Vendor Negotiation & Cost Optimization</li>
-      </ul>
-
-      <p class="highlight">
-        Operating as Full IT Department – Strategy + Architecture + Security + Support.
-      </p>
-    </section>
-
-    <section>
-      <h2>Business Transformation Achieved</h2>
-
-      <ul>
-        <li class="highlight">₹20+ Lakhs Annual Savings</li>
-        <li>Improved Infrastructure Stability & Uptime</li>
-        <li>Eliminated Vendor Lock-In</li>
-        <li>Enhanced Data Security</li>
-        <li>ERP-Based Process Automation</li>
-        <li>Scalable IT Foundation for Future Growth</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Why Hire Me as IT Head / Infrastructure Director?</h2>
-
-      <ul>
-        <li class="highlight">✔ Proven Cost Reduction Leader</li>
-        <li class="highlight">✔ Strategic Thinker with Hands-On Execution</li>
-        <li class="highlight">✔ Built Enterprise Systems from Scratch</li>
-        <li class="highlight">✔ Eliminates Vendor Dependency</li>
-        <li class="highlight">✔ Strong Cybersecurity & DR Expertise</li>
-        <li class="highlight">✔ Long-Term Infrastructure Vision (10–20 Year Planning)</li>
-        <li class="highlight">✔ Business-Focused Technology Decision Maker</li>
-      </ul>
-
-      <p>
-        I do not just maintain IT systems.
-        I design cost-efficient, secure, scalable enterprise environments that directly support business growth and
-        profitability.
-      </p>
-    </section>
-
-    <section style="text-align:center;">
-      <h2>Executive Resume</h2>
-      <a href="resume.pdf" target="_blank">
-        <button>Download Resume</button>
-      </a>
-    </section>
-
-  </div>
+    </script>
 
 </body>
 
 </html>
-
-
